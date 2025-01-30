@@ -1,3 +1,5 @@
+package com.examen.examen2p.model;
+
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -7,7 +9,7 @@ import java.util.List;
 
 @Data
 @Document(collection = "branches")
-public class Branch {
+public class Branch implements Serializable {
     @Id
     private String id;
     private String emailAddress;
